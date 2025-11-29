@@ -23,7 +23,7 @@ app.get('/status', (req, res) => {
   res.json({ ok: true, service: 'aman poll, jos jis' });
 });
 
-app.post('/register-admin', async (req, res, next) => {
+app.post('/register-admin', [authenticateToken, authorizeRole('owner')], async (req, res, next) => {
   const { username, password } = req.body;
   if (!username || !password || password.length < 6) {
     return res.status(400).json({ error: 'Username dan password (min 6 char) harus diisi' });
