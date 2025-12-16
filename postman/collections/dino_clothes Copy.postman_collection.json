@@ -1,0 +1,230 @@
+{
+  "info": {
+    "_postman_id": "3fc292c8-0ed4-4ff7-b400-553d3602ecba",
+    "name": "dino_clothes Copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "status",
+      "id": "bcedcb1e-9b34-4e89-b7dc-9df971177878",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3300/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "status"
+          ]
+        }
+      }
+    },
+    {
+      "name": "registerOwner",
+      "id": "2abad7ea-4ded-48cd-be45-45a8e681132d",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"Bos Dino\",\r\n  \"password\": \"dinoGanteng15\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3300/register-owner",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "register-owner"
+          ]
+        }
+      }
+    },
+    {
+      "name": "registerAdmin",
+      "id": "9ead0518-a2bf-4fec-b2b9-338577165a42",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"admin1\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3300/register-admin",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "register-admin"
+          ]
+        }
+      }
+    },
+    {
+      "name": "login admin",
+      "id": "a2c21e1e-274c-4f8f-9be0-e9d0e3c61397",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"admin1\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3300/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "login owner",
+      "id": "59931085-ea69-462e-8737-19694a03aa9b",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"Bos Dino\",\r\n  \"password\": \"dinoGanteng15\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3300/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "tambah produk",
+      "id": "d89227b8-ed42-4c47-b154-29464e34e8b1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImJvcyBkaW5vIiwicm9sZSI6Im93bmVyIn0sImlhdCI6MTc2NDQyMDI3NCwiZXhwIjoxNzY0NDIzODc0fQ.J1Wx-KN6Pm23l1vC-Sa-Y6KNJZEiOzMQjKEFc9ESqGw",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"sku\": \"TSHIRT-001\",\r\n  \"productName\": \"Baju Nirvana kw super\",\r\n  \"price\":75000\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3300/tambahProducts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "tambahProducts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "update stok",
+      "id": "95afde77-a03a-4b6e-a93e-0bf1d8029fb0",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJ1c2VybmFtZSI6ImFkbWluMSIsInJvbGUiOiJ3YXJlaG91c2VBZG1pbiJ9LCJpYXQiOjE3NjQ0MjAxMTUsImV4cCI6MTc2NDQyMzcxNX0.hZ1gghcPXKd00Bn6Rq0KXp5yD5MVKT8Sx4CjevWItoc",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"isAvailable\": \"true\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3300/editStock/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "editStock",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "hapus produk",
+      "id": "56abb3a7-8e22-436f-b4f9-4861befe0297",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImJvcyBkaW5vIiwicm9sZSI6Im93bmVyIn0sImlhdCI6MTc2NDQyMDI3NCwiZXhwIjoxNzY0NDIzODc0fQ.J1Wx-KN6Pm23l1vC-Sa-Y6KNJZEiOzMQjKEFc9ESqGw",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3300/products/TSHIRT-001",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "products",
+            "TSHIRT-001"
+          ]
+        }
+      }
+    }
+  ]
+}
